@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DisplayIt = (props) => {
+const Description = (props) => {
   return (
     <div>
      <h1>This is where it will be</h1>
@@ -9,4 +9,4 @@ const DisplayIt = (props) => {
   )
 }
 
-export default DisplayIt;
+export default Description;
