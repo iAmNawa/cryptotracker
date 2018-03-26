@@ -15,8 +15,8 @@ class Results extends Component {
     request.responseType = 'json';
 
     request.onload = function() {
-      this.setState({null: request.response.price})
-      console.log(request.response.price)
+      this.setState({info: request.response})
+      console.log(request.response)
     }.bind(this)
     request.send();
   }
@@ -28,7 +28,7 @@ class Results extends Component {
   render() {
     return (
       <div>
-       <h1>Hello</h1>
+       <h1>{this.state.info}</h1>
       </div>
     )
   }
