@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import DisplayIt from '../components/DisplayIt';
+
 class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -17,6 +19,7 @@ class SearchBar extends Component {
       <div>
         <input type="text" onChange={ this.setSearchValue } value={ this.state.SearchForName } />
         <h1>{this.state.SearchForName}</h1>
+        <DisplayIt />
       </div>
     );
  }
