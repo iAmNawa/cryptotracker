@@ -6,7 +6,7 @@ class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      SearchForName: null
+      SearchForName: ""
     }
   }
 
@@ -18,8 +18,7 @@ class SearchBar extends Component {
     return (
       <div>
         <input type="text" onChange={ this.setSearchValue } value={ this.state.SearchForName } />
-        <h1>{this.state.SearchForName}</h1>
-        <Description />
+        <Description searchy={this.state.SearchForName}/>
       </div>
     );
  }
