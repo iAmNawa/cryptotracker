@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 
+import SearchBar from '../SearchBar/SearchBar';
+
 class Results extends Component {
   constructor(props) {
    super(props);
    this.state = {
      word: null,
-     description: null
+     description: null,
+     name: 'startname',
+     testThingy: 'string'
    }
   }
 
   testXHR = () => {
-    var thing = "Van Buren";
+    var thing = "dylan";
 
     var request = new XMLHttpRequest();
     //request.addEventListener("load", letUsGetResults);
@@ -28,11 +32,12 @@ class Results extends Component {
     this.testXHR();
   }
 
+
+
   render() {
     return (
       <div>
-       <h1>{this.state.word}</h1>
-       <h1>{this.state.description}</h1>
+        <SearchBar />
       </div>
     )
   }
