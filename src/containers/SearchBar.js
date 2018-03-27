@@ -7,7 +7,7 @@ class SearchBar extends Component {
     super(props);
     this.state = {
       SearchForName: "",
-      description: ""
+      description: "This"
     }
   }
 
@@ -15,11 +15,11 @@ class SearchBar extends Component {
 
     var request = new XMLHttpRequest();
     //request.addEventListener("load", letUsGetResults);
-    request.open('GET', `https://en.wikipedia.org/w/api.php?action=opensearch&search=butterfly&format=json&origin=*`);
+    request.open('GET', 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + e.target.value + '&format=json&origin=*');
     request.responseType = 'json';
 
     request.onload = function() {
-      setTimeout(function(){ this.setState({description: request.response[2]}) }.bind(this), 200);
+      this.setState({description: request.response[2]})
       console.log(request.response[2])
     }.bind(this)
     request.send();
