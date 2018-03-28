@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Aux from '../hoc/Aux';
 
 class Description extends Component {
   constructor(props) {
@@ -7,10 +8,10 @@ class Description extends Component {
 
   render() {
     return (
-      <div>
+      <Aux>
         <h1>Search Word: {this.props.searchy}</h1>
         <h1>{this.props.descripty}</h1>
-      </div>
+      </Aux>
     )
   }
 }
